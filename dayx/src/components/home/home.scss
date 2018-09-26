@@ -1,0 +1,129 @@
+@import './../lib/reset.scss';
+#home{
+    @include rect(100%, 88%);
+    position: relative;
+        .home-top-img{
+            position: absolute;
+            top     : .1rem;
+            left    : .1rem;
+            @include rect(.4rem, .4rem);
+            @include background-color(#ffffff);
+            border-radius: .05rem;
+            img{
+                @include rect(100%, auto);
+            }
+        }
+        .home-top-right{
+            position: absolute;
+            top     : .1rem;
+            right   : .1rem;
+            @include rect(.4rem, auto);
+            @include background-color(transparent);
+            @include flexbox();
+            @include justify-content(space-between);
+            @include align-items();
+            @include flex-direction(column);
+            li{
+                @include rect(100%, .4rem);
+                @include flexbox();
+                @include justify-content();
+                @include align-items();
+                @include flex-direction(column);
+                @include margin(0 0 .1rem 0);
+                @include font-size(.12rem);
+                @include text-color(#ffffff);
+                border-radius   : .05rem;
+                background-color: rgba($color: #000000, $alpha:.3);
+                i{
+                    @include font-size(.3rem);
+                    @include flexbox();
+                    @include justify-content();
+                    @include align-items();
+                    @include text-color(#ffffff);
+                }
+                &:nth-child(2){
+                  i{
+                      @include font-size(.2rem);
+                   }
+                }
+            }   
+        }
+    
+    .home-bottom-left{
+        position: absolute;
+        bottom  : .5rem;
+        left    : .1rem;
+        @include rect(.4rem, auto);
+        @include background-color(transparent);
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items();
+        @include flex-direction(column);
+        li{
+            @include rect(100%, .4rem);
+            @include flexbox();
+            @include justify-content();
+            @include align-items();
+            @include flex-direction(column);
+            @include margin(0 0 .1rem 0);
+            @include background-color(#ffffff);
+            @include font-size(.2rem);
+            border-radius: .05rem;
+            i{
+                @include font-size(.3rem);
+             }
+        }
+    }
+    .home-bottom-right{
+        position: absolute;
+        bottom  : .5rem;
+        right   : .1rem;
+        @include rect(.4rem, auto);
+        @include background-color(transparent);
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items();
+        @include flex-direction(column);
+        li{
+            @include rect(100%, .4rem);
+            @include flexbox();
+            @include justify-content();
+            @include align-items();
+            @include flex-direction(column);
+            @include margin(0 0 .1rem 0);
+            @include background-color(#ffffff);
+            border-radius: .05rem;
+            i{
+               @include font-size(.2rem);
+            }
+            &:nth-child(1){
+                @include rect(100%, .8rem);
+                @include flexbox();
+                @include justify-content();
+                @include align-items();
+                @include flex-direction(column);
+                @include padding(.03rem);
+                div{
+                    @include rect(100%, 50%);
+                    @include flexbox();
+                    @include justify-content();
+                    @include align-items();
+                    &:nth-child(1){
+                        border-bottom: 1px solid #777272;
+                    }
+                }
+            }
+               
+        }
+    }
+
+}
+.amap-geolocation-con .amap-geo, .amap-touch-toolbar .amap-geo{
+    position: absolute;
+    bottom  : .5rem;
+    left    : 0;
+    @include rect(.4rem, .4rem);
+}
+.amap-touch-toolbar .amap-zoomcontrol{
+    bottom: .55rem;
+}

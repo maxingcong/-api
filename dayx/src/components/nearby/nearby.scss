@@ -1,0 +1,104 @@
+@import './../lib/reset.scss';
+.nearby{
+    @include background-color(#f0eeee);
+    @include rect(100%,100%);
+    .nearby-top{
+        @include rect(100%, .6rem);
+        @include background-color(#ffffff);
+        @include padding(.1rem .2rem);
+        @include flexbox();
+        @include justify-content(start);
+        @include  align-items();
+        .nearby-top-left{
+            @include margin(.1rem);
+            border-right: 1px solid #cccccc;
+            @include padding (0 .1rem);
+        }
+        .nearby-right{
+            @include rect(100%, 100%);
+            @include text-color(#777070);
+            @include padding(0 .1rem);
+            em{
+                @include padding (0 .05rem);
+            }
+            div{
+                @include flexbox();
+                @include justify-content(space-between);
+                @include  align-items();
+                em{
+                    @include text-color(#000000);
+                }
+                .nearby-span1{
+                    @include text-color(rgb(50, 50, 243))
+                }
+            }
+            
+        }
+        li{
+            list-style: none;
+        }
+    }
+    p{
+        @include rect(85%, 1px);
+        @include border(1px, #cccccc);
+        @include background-color(#ffffff);
+        margin: 0 .24rem;
+        
+    }
+    ul{
+        @include rect(100%, auto);
+        @include background-color(#ffffff);
+        @include padding(0 .1rem);
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+        @include  align-items();
+        li{
+            @include rect(25%, .9rem);
+            @include flexbox();
+            @include flex-wrap(wrap);
+            @include justify-content();
+            @include  align-items();
+            @include flex-direction(column);
+            em{
+                @include margin(.05rem 0);
+            }
+
+        }
+       
+    }
+    .nearby-foot1{
+        @include rect(100%,.5rem);
+        @include background-color(#ffffff);
+        @include margin(.1rem 0);
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items();
+        @include padding(0 .1rem);
+        img{
+            @include margin(0 .1rem);
+        }
+        span{
+            &:nth-child(2){
+               @include rect(.5rem, .3rem);
+               @include border(1px ,blue);
+               @include flexbox();
+               @include justify-content();
+               @include align-items();
+            }
+        }
+    }
+    .nearby-foot2{
+        @include rect(100%, .3rem);
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items();
+        @include padding(0 .5rem);
+        color: #ccc;
+        li{
+            list-style: none;
+           
+        }
+    }
+
+}

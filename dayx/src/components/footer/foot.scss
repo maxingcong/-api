@@ -1,0 +1,17 @@
+@import './../lib/reset.scss';
+.footer{
+    @include rect(100%, .5rem);
+    @include background-color(yellow);
+    ul{
+        @include  flexbox();
+        @include justify-content(space-around);
+        @include align-items();
+        @include rect(100%, 100%);
+        a{
+            @include text-color(#000000);
+            &.active{
+                @include text-color(red);
+            }
+        } 
+    }
+}

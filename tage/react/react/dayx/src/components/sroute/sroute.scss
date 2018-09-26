@@ -1,0 +1,68 @@
+@import './../lib/reset.scss';
+.sroute{
+    @include rect(100%, 100%);
+    @include background-color(#fafafa);
+    .sroute-ul{
+        @include rect(100%,.5rem);
+        @include padding(0 0 0 .7rem);
+        @include flexbox();
+        @include justify-content(space-around);
+        @include align-items();
+        @include background-color(#fafafa);
+        li{
+            @include flexbox();
+            @include justify-content(space-around);
+            @include align-items();
+            @include rect(20%, 100%);
+            color: #ccc;
+            &:nth-child(1){
+                color: blue;
+            }
+            i{
+               @include font-size(.25rem);      
+            }
+         
+        }
+    }
+    .sroute-div{
+        @include rect(100%, 1rem);
+        @include flexbox();
+        @include justify-content(space-around);
+        @include align-items();
+        @include background-color(#ffffff);
+        .sroute-div-left-top{
+            @include flexbox();
+            @include rect(100%, 100%);
+            margin-bottom: .05rem;
+            @include text-color(#ccc);
+            input{
+                @include margin(0 0 0 .1rem);
+                @include rect(100%, 100%);
+                @include font-size(.16rem);
+                color      : #000000;
+                border     : none;
+                text-indent: .1rem;
+            }
+        }
+        .sroute-div-left-bottom{
+            @include flexbox();
+            @include rect(100%, 100%);
+            margin-bottom: .05rem;
+            @include text-color(#ccc);
+            input{
+                @include margin(0 0 0 .1rem);
+                @include rect(100%, 100%);
+                @include font-size(.16rem);
+                color      : #000000;
+                border     : none;
+                text-indent: .1rem;
+            }
+        }
+        .sroute-div-right{
+            i{
+              font-size: .2rem;
+              @include text-color(blue);
+            }
+        }
+    }
+}

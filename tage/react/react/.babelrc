@@ -1,0 +1,12 @@
+{  
+    "presets": [ // 用来解析各种文件
+        ["env", { // 含有最新的js版本
+            "modules": false,  // 不依赖模块
+            "targets": {   // 运行在浏览器端的配置，支持每个浏览器端最后的两个版本，不能小于ie8
+              "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+            }
+        }],
+        "react"
+    ],
+    "plugins": []
+}

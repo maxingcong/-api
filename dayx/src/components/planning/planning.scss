@@ -1,0 +1,17 @@
+@import './../lib/reset.scss';
+
+.planning{
+  @include rect(100%,100%);
+  position: relative;
+  .planning-top{
+    @include rect(100%, .5rem);
+    @include background-color(#ccc);
+    line-height: .5rem;
+    i{
+      @include padding(0 0 0 .1rem);
+    }
+  }
+  #planning-main{
+    @include rect(100%, 95%);
+  }
+}

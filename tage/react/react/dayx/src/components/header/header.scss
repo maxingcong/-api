@@ -1,0 +1,101 @@
+@import './../lib/reset.scss';
+.header{
+    @include flexbox();
+    @include justify-content();
+    @include align-items();
+    @include flex-direction(column);
+    @include background-color(#3d92fb);
+    @include rect(100%, .9rem);
+    @include padding(.05rem .1rem);
+    .header-top{
+        @include flex();
+        @include rect(100%, 50%);
+        .header-top-ul{
+            @include rect(100%, 100%);
+            @include flexbox();
+            @include justify-content(space-around);
+            @include align-items();
+            li{ 
+                @include flexbox();
+                @include justify-content();
+                @include align-items();
+                @include rect(25%,100%);
+                @include font-size(.16rem);
+                a{
+                    @include text-color(#d1c4c4);
+                    &.active{
+                        @include text-color(#ffffff);
+                    }
+                }
+               
+                img{
+                  @include rect(90%, auto);
+                }
+                
+            }
+        }
+    }
+    .header-botton{
+        @include flex();
+        @include rect(100%, 50%);
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        @include padding(.05rem .05rem);
+        position: relative;
+        .header-botton-secah{
+            @include background-color(#357fdb);
+            @include rect(100%, 100%);
+            @include flexbox();
+            @include justify-content();
+            @include align-items();
+            @include border-radius(.05rem 0.05rem .05rem 0.05rem);
+            input{
+                @include border-radius(.05rem 0.05rem .05rem 0.05rem);
+                @include text-color(#ffffff);
+                @include background-color(#357fdb);
+                @include rect(80%, 100%);
+                border     : none;
+                text-indent: .1rem;
+            }
+            input::-webkit-input-placeholder{
+                color: #e0dbdb;
+            }
+            input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+                color: #e0dbdb;
+            }
+            input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+                color: #e0dbdb;
+            }
+            input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+                color: #e0dbdb;
+            }
+            button{
+                @include flexbox();
+                @include justify-content();
+                @include align-items();
+                @include background-color(transparent);
+                @include rect(20%,100%);
+                border: none;
+                i{
+                    @include text-color(#e0dbdb);
+                }
+            }
+        }
+        ul{
+            position: absolute;
+            top  : .35rem;
+            left    : .1rem;
+            z-index : 2000;
+            @include background-color(#ccc);
+            span{
+                @include text-color(#fff);
+                @include font-size(.16rem);
+                @include padding(0 0 0 .05rem);
+            }
+            em{
+                @include  font-size(.12rem);
+            }
+        }
+    }
+}

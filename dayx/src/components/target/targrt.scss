@@ -1,0 +1,47 @@
+@import './../lib/reset.scss';
+.target{
+  @include rect(100%,100%);
+  position: relative;
+  .target-top{
+    @include rect(100%, .5rem);
+    @include background-color(#ccc);
+    line-height: .5rem;
+    i{
+      @include padding(0 0 0 .1rem);
+    }
+  }
+  #target-main{
+    @include rect(100%, 95%);
+    #panel {
+      position        : fixed;
+      background-color: white;
+      max-height      : 90%;
+      overflow-y      : auto;
+      top             : 10px;
+      right           : 10px;
+      width           : 280px;
+    }
+  }
+  .target-route{
+    @include rect(100%, .8rem);
+    position: absolute;
+    z-index : 101;
+    bottom  : .1rem;
+    .target-route-span{
+       @include rect(100%, .5rem);
+       @include flexbox();
+       @include justify-content();
+       @include align-items();
+      span{
+        @include rect(100%,100%);
+        @include font-size(.16rem);
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        border-radius: .5rem;
+        @include background-color(#eeeded);
+      }
+    }
+   
+  }
+}
